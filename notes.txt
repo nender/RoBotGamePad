@@ -1,0 +1,26 @@
+Gamepad has
+Axes: 4 range -32768..32767)
+Buttons: 12 range 0..1
+Hats: 1 range 9 unique positions
+
+Design for communication
+joy_events-->state_struct--->network---->arduino
+
+Need to test for out of order packets in udp, if it's a small percentage
+it should be nbd
+
+01234567
+ABCDEFGH
+
+01234567
+ABCD0000
+
+
+PWM argument, DC Voltage (diode bypassed)
+0, 0
+32, 0.58
+48, 0.88
+64, 1.17
+128, 2.34
+192, 3.51
+255, 4.66
